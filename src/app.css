@@ -1,0 +1,42 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body
+{
+    @apply font-valera;
+    color: white;
+}
+
+@font-face {
+	font-family: 'VarelaRound';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/VarelaRound-Regular.ttf');
+}
+
+.w-xl
+{
+    @apply w-full max-w-xl
+}
+
+.hover-pop
+{
+    @apply hover:scale-105 transition-all
+}
+
+.press-pop
+{
+    @apply active:scale-95 transition-all
+}
+
+.all-center
+{
+    @apply items-center justify-center
+}
+
+@keyframes cross
+{
+    0% { text-decoration: none; }
+    100% { text-decoration: line-through; }
+}
