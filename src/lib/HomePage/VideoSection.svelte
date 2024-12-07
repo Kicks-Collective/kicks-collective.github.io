@@ -18,12 +18,13 @@
 			title: 'Open Forts',
 			description: 'An open source implementation of GMOD Fortwars in s&box',
 			image: '/openforts.png',
-			status: 'Sep 2024 - Dec 2024'
+			status: 'Sep 2024 - Dec 2024',
+			link: 'https://sbox.game/nolankicks/fortwars'
 		},
 		{
 			title: 'Ringworld',
 			description: 'A Halo inspired game mode for s&box',
-			status: 'In Development'
+			status: 'In Development',
 		}
 	];
 

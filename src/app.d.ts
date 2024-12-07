@@ -12,8 +12,9 @@ declare global {
 	interface GameProject {
 		title: string,
 		description: string,
-		image: string,
+		image?: string,
 		status?: string,
+		link?: string,
 	}
 }
 

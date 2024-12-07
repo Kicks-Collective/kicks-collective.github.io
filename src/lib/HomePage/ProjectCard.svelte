@@ -1,24 +1,27 @@
 <script lang="ts">
     let { project }: { project: GameProject } = $props();
-
-    let style = project.image ? "w-[50%]" : "w-full items-center"
 </script>
 
-<div class="flex flex-row items-center bg-primary rounded-md p-3 h-52 w-full justify-evenly">
+<div class="flex flex-row items-start bg-primary rounded-md p-3 h-52 gap-2 w-full justify-evenly">
     
-    <div class="h-full style flex flex-col justify-evenly">
-        <p class="text-lg">{project.title}</p>
+    <div class="h-full flex w-full flex-col justify-evenly">
+
+        {#if project.link}
+            <a href={project.link} class="text-[0.9em] hover:text-alt transition-all">{project.title}</a>
+        {:else}
+            <p class="text-[0.9em] transition-all">{project.title}</p>
+        {/if}
         
         {#if project.description}
-            <p class="text-[0.7em] md:text-lg">{project.description}</p>
+            <p class="text-[0.8em] md:text-lg">{project.description}</p>
         {/if}
 
         {#if project.status}
-            <p class="text-[0.5em] md:text-sm">{project.status}</p>
+            <p class="text-[0.7em] md:text-base">{project.status}</p>
         {/if}
     </div>
 
     {#if project.image}
-        <img src={project.image} alt={project.title} class="h-full style aspect-square rounded-md flex" />
+        <img src={project.image} alt={project.title} class="h-full aspect-square rounded-md flex" />
     {/if}
 </div>
