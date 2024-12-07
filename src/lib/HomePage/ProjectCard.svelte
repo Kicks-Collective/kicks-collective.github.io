@@ -7,17 +7,17 @@
     <div class="h-full flex w-full flex-col justify-evenly">
 
         {#if project.link}
-            <a href={project.link} class="text-[0.9em] hover:text-alt transition-all">{project.title}</a>
+            <a href={project.link} class="text-lg hover:text-alt transition-all">{project.title}</a>
         {:else}
-            <p class="text-[0.9em] transition-all">{project.title}</p>
+            <p class="text-lg transition-all">{project.title}</p>
         {/if}
         
         {#if project.description}
-            <p class="text-[0.8em] md:text-lg">{project.description}</p>
+            <p class="text-sm md:text-lg">{project.description}</p>
         {/if}
 
         {#if project.status}
-            <p class="text-[0.7em] md:text-base">{project.status}</p>
+            <p class="text-sm md:text-base">{project.status}</p>
         {/if}
     </div>
 
