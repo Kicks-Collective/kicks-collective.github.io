@@ -8,9 +8,6 @@
 	let firstVideoLoaded: boolean = false;
 	let nextVideoLoaded: boolean = false;
 
-	let elementOnce;
-	let intersectOnce;
-
 	let index = 0;
 
 	let projects: GameProject[] = [
@@ -25,10 +22,19 @@
 			title: 'Ringworld',
 			description: 'A Halo inspired game mode for s&box',
 			status: 'In Development',
+			image: ''
 		}
 	];
 
-	let videos: string[] = ['/Dec 23 2023 Video.mp4'];
+	let videos: string[] = [
+		'/menuvideos/Dec 1 2024 Video.mp4',
+		'/menuvideos/Nov 28 2024 Video.mp4',
+		'/menuvideos/Nov 28 2024 Video (1).mp4',
+		'/menuvideos/Nov 28 2024 Video (2).mp4',
+		'/menuvideos/Dec 2 2024 Video.mp4'
+	];
+
+	shuffleArray(videos);
 
 	function shuffleArray(array: string[]): string[] {
 		for (let i = array.length - 1; i > 0; i--) {
@@ -104,7 +110,7 @@
 					class="flex h-full w-full flex-col"
 				>
 					<div class="flex flex-shrink-0 flex-col">
-						<div class="mb-2 text-center text-3xl font-bold">
+						<div class="mb-2 text-center text-3xl font-bold drop-shadow-2xl">
 							We strive to create compeling and enjoyable experiences in s&box
 						</div>
 						<div class="mb-2 h-1 w-full rounded-md bg-white"></div>

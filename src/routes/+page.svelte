@@ -8,4 +8,6 @@
 
 <VideoSection />
 
+<!--
 <Footer />
+-->
