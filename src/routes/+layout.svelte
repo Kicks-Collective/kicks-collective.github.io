@@ -6,7 +6,7 @@
 </script>
 
 
-<div class="fixed w-full h-full bg-altalt -z-50"></div>
+<div class="fixed w-full h-full bg-altalt -z-[100]"></div>
 
 
 <!-- <Header /> -->

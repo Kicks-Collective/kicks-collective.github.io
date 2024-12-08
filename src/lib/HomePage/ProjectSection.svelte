@@ -25,83 +25,11 @@
 			image: ''
 		}
 	];
-
-	let videos: string[] = [
-		'/menuvideos/Dec 1 2024 Video.mp4',
-		'/menuvideos/Nov 28 2024 Video.mp4',
-		'/menuvideos/Nov 28 2024 Video (1).mp4',
-		'/menuvideos/Nov 28 2024 Video (2).mp4',
-		'/menuvideos/Dec 2 2024 Video.mp4'
-	];
-
-	shuffleArray(videos);
-
-	function shuffleArray(array: string[]): string[] {
-		for (let i = array.length - 1; i > 0; i--) {
-			const j = Math.floor(Math.random() * (i + 1));
-			[array[i], array[j]] = [array[j], array[i]];
-		}
-		return array;
-	}
-
-	async function loadNextvideo() {
-		let nextIndex = (index + 1) % videos.length;
-		if (nextIndex < 0) nextIndex = videos.length + index;
-
-		await awaitNextVideoLoad();
-
-		index = nextIndex;
-	}
-
-	async function cacheNextVideo() {
-		nextVideoLoaded = false;
-
-		let nextIndex = (index + 1) % videos.length;
-		if (nextIndex < 0) nextIndex = videos.length + index;
-
-		const v = document.createElement('video');
-		v.src = videos[nextIndex];
-		v.addEventListener('loadeddata', () => {
-			nextVideoLoaded = true;
-		});
-	}
-
-	async function awaitNextVideoLoad() {
-		while (!nextVideoLoaded) {
-			await new Promise((resolve) => setTimeout(resolve, 100));
-		}
-		return true;
-	}
-
-	onMount(() => {
-		const v = document.createElement('video');
-		v.src = videos[0];
-		v.addEventListener('loadeddata', () => {
-			firstVideoLoaded = true;
-		});
-	});
-
+	
 	let node: HTMLDivElement;
 </script>
 
 <div class="relative flex h-[42rem] w-full items-center justify-center overflow-hidden">
-	{#if videos && firstVideoLoaded}
-		{#each [videos[index]] as src (index)}
-			<video
-				preload="auto"
-				autoplay
-				muted
-				class="absolute -z-20 h-full w-full object-cover blur-md"
-				on:loadeddata={() => cacheNextVideo()}
-				on:ended={() => loadNextvideo()}
-				in:fly={{ duration: 300, x: '100%', opacity: 1, easing: quintInOut }}
-				out:fly={{ duration: 300, x: '-100%', opacity: 1, easing: quintInOut }}
-			>
-				<source {src} type="video/mp4" />
-			</video>
-		{/each}
-	{/if}
-
 	<IntersectionObserver element={node} let:intersecting once>
 		<div class="flex h-[100%] w-full max-w-4xl flex-col items-center px-5 py-10" bind:this={node}>
 			{#if intersecting}

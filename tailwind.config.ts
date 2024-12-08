@@ -7,7 +7,7 @@ export default {
 		colors: {
 			primary: '#f04f39',
 			altalt: '#434c65',
-			alt: '#49F5FF',
+			alt: '#39daf0',
 			white: 'white'
 		},
 		extend: {
@@ -16,7 +16,7 @@ export default {
             },
 			animation: {
 				cross: 'cross 1s'
-			}
+			},
 		}
 	},
 
