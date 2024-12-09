@@ -33,10 +33,10 @@
 					class="flex h-full w-full flex-col"
 				>
 					<div class="flex flex-shrink-0 flex-col">
-						<div class="mb-2 text-center text-3xl font-bold drop-shadow-2xl">
+						<div class="mb-5 text-center text-3xl font-bold drop-shadow-2xl">
 							We strive to create compeling and enjoyable experiences in s&box
 						</div>
-						<div class="mb-2 h-1 w-full rounded-md bg-white"></div>
+						<div class="mb-5 h-1 w-full rounded-md bg-white"></div>
 					</div>
 
 					<div
