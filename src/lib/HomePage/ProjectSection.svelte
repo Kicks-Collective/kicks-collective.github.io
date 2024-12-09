@@ -5,11 +5,6 @@
 	import IntersectionObserver from 'svelte-intersection-observer';
 	import ProjectCard from './ProjectCard.svelte';
 
-	let firstVideoLoaded: boolean = false;
-	let nextVideoLoaded: boolean = false;
-
-	let index = 0;
-
 	let projects: GameProject[] = [
 		{
 			title: 'Open Forts',
@@ -18,18 +13,18 @@
 			status: 'Sep 2024 - Dec 2024',
 			link: 'https://sbox.game/nolankicks/fortwars'
 		},
-		{
+		/*{
 			title: 'Ringworld',
 			description: 'A Halo inspired game mode for s&box',
 			status: 'In Development',
 			image: ''
-		}
+		}*/
 	];
 	
 	let node: HTMLDivElement;
 </script>
 
-<div class="relative flex h-[42rem] w-full items-center justify-center overflow-hidden">
+<div class="relative flex w-full items-center justify-center overflow-hidden mb-10">
 	<IntersectionObserver element={node} let:intersecting once>
 		<div class="flex h-[100%] w-full max-w-4xl flex-col items-center px-5 py-10" bind:this={node}>
 			{#if intersecting}
@@ -48,7 +43,7 @@
 						transition:fly={{ delay: 1000, y: '100%', easing: quintInOut }}
 						class="flex h-full w-full flex-shrink flex-col text-xl"
 					>
-						<div class="grid grid-rows-4 md:grid-cols-2 grid-cols-1 grid-flow-col md:grid-flow-row gap-4">
+						<div class="flex flex-col gap-4">
 							{#each projects as project}
 								<ProjectCard project={project} />
 							{/each}
