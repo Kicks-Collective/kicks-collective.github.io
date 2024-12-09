@@ -8,7 +8,7 @@
 	let projects: GameProject[] = [
 		{
 			title: 'Open Forts',
-			description: 'An open source implementation of GMOD Fortwars in s&box',
+			description: "An open source implementation of Fortwars, a Garry's mode gamemode, in s&box",
 			image: '/openforts.png',
 			status: 'Sep 2024 - Dec 2024',
 			link: 'https://sbox.game/nolankicks/fortwars'
