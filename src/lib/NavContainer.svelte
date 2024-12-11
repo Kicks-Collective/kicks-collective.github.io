@@ -1,7 +1,9 @@
 <script lang="ts">
-	let { children, style = "" } = $props();
+	let { children } = $props();
 </script>
 
-<div class="flex {style} justify-center items-center h-16 gap-4 hover-pop press-pop cursor-pointer p-3 rounded-md drop-shadow-md hover:drop-shadow-xl">
-    {@render children()}
+<div
+	class="flex h-16 cursor-pointer items-center justify-center gap-4 p-3 hover:scale-105 active:scale-95 transition-all"
+>
+	{@render children()}
 </div>

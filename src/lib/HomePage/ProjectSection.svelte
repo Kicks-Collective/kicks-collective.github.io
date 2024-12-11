@@ -24,9 +24,9 @@
 	let node: HTMLDivElement;
 </script>
 
-<div class="relative flex w-full items-center justify-center overflow-hidden mb-10">
+<div class="relative flex w-full items-center justify-center overflow-hidden">
 	<IntersectionObserver element={node} let:intersecting once>
-		<div class="flex h-[100%] w-full max-w-4xl flex-col items-center px-5 py-10" bind:this={node}>
+		<div class="flex h-full w-full max-w-4xl flex-col items-center px-5 py-10" bind:this={node}>
 			{#if intersecting}
 				<div
 					transition:fly={{ delay: 600, y: '60%', easing: quintInOut }}

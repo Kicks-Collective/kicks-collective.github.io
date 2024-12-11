@@ -16,6 +16,11 @@ declare global {
 		status?: string,
 		link?: string,
 	}
+
+	interface Member {
+		Name: string,
+		Image: string
+	}
 }
 
 export { };

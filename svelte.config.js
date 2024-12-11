@@ -31,7 +31,7 @@ const config = {
 		}
 	},
 
-    extensions: ['.svelte', '.md', '.svx', '.mp4'],
+    extensions: ['.svelte', '.md', '.svx', '.mp4', '.mov'],
     preprocess: [
         vitePreprocess(),
         autoImport({

@@ -9,6 +9,6 @@
 <div class="fixed w-full h-full bg-altalt -z-[100]"></div>
 
 
-<!-- <Header /> -->
+<Header />
 
 {@render children()}

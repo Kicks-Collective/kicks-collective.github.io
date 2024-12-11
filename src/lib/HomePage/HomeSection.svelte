@@ -16,7 +16,8 @@
 		'/menuvideos/Nov 28 2024 Video.mp4',
 		'/menuvideos/Nov 28 2024 Video (1).mp4',
 		'/menuvideos/Nov 28 2024 Video (2).mp4',
-		'/menuvideos/Dec 2 2024 Video.mp4'
+		'/menuvideos/Dec 2 2024 Video.mp4',
+		'/menuvideos/Dec 10 2024 Video.mov'
 	];
 
 	shuffleArray(videos);
@@ -77,7 +78,8 @@
 		<div class="text-sm all-center flex w-full animate-bounce gap-1 sm:text-2xl">
 			<p>Making</p>
 			<p class="animate-cross line-through transition-all">kick ass</p>
-			<p>games in <a href="https://sbox.game/nolankicks" class="text-alt">s&box</a></p>
+            <!--Change this to the new org once ringworld releases-->
+			<p>games in <a href="https://sbox.game/nolankicks" class="text-alt hover:text-altalt transition-all">s&box</a></p>
 		</div>
 	</div>
 	{#if videos && firstVideoLoaded}
@@ -97,6 +99,7 @@
 		{/each}
 	{/if}
 
+    <!--Fallback for mobile-->
 	<img
 		src="/forts.png"
 		class="absolute -z-40 h-full w-full object-cover blur grayscale-[30%]"
